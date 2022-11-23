@@ -1,0 +1,15 @@
+TODO:
+
+[
+"**/*.js",
+"**/*.jsx",
+"**/*.ts",
+"**/*.tsx",
+"**/*.html",
+"**/*.php",
+"**/*.css",
+"**/*.scss"
+]
+
+// TODO: Load state from previously suspended application
+//FIXME: Load state from previously suspended application
