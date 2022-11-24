@@ -57,7 +57,8 @@ body{
     width: 70%;
     margin-top: 15px;
     margin-left: 3%;
-    height: 50px;
+    height: auto;
+    /* height: 50px; */
     background: rgba(255, 255, 255, 0.438);
     display: flex;
     border-radius: 25px;
@@ -74,14 +75,19 @@ p{
     color: rgba(77, 77, 77, 0.712);
     padding-left: 3%;
     border-radius: 15px;
-    line-height: 50px;
+    /* line-height: 25px; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: auto;
+    font-size: 14px;
 }
 
 .receiver{
     width: 70%;
     margin-top: 15px;
+    height: auto;
     margin-left: 27%;
-    height: 50px;
+    /* height: 50px; */
     background: rgba(255, 255, 255, 0.438);
     display: flex;
     border-radius: 25px;
@@ -90,9 +96,9 @@ p{
     background: rgba(255, 130, 130, 0.329);
     width: 90%;
     border-radius: 15px;
-    height: 430px;
+    height: 350px;
     margin-top: 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .msg{
@@ -138,4 +144,74 @@ span{
     font-style: italic;
 }
 
+
+.typing{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    animation: type 4s infinite;
+    transition: 320ms;
+    display: none;
+}
+
+@keyframes type {
+     25%{color: rgb(124, 124, 124);transition: 320ms;}
+     50%{color: rgb(56, 37, 1);transition: 320ms;}
+}
+
 /*form*/
+
+ @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .chatbox{
+        width: 98%;
+        height: 94%;
+    }
+    .sender , .receiver{
+        width: 94%;
+        
+    }
+    .receiver{
+        margin-left: 3%;
+    }
+    p{
+        font-size: 11px;
+    }
+    .main{
+        width: 98%;
+        height: 85%;
+    }
+    img{
+        width: 25px;
+    }
+    .icon{
+        width: 25px;
+        height: 25px;
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        background: transparent;
+    }
+    #msgs{
+        height: 30px;
+        font-size: 12px;
+    }
+    .msg{
+        height: 30px;
+        width: 98%;
+    }
+    button{
+        height: 30px;
+    }
+    bottom img{
+
+    }
+  } 
+
+  /* @media screen and (min-width: 480px) {
+    body{
+        height: 50vh;
+    }
+  } */
+
+

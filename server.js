@@ -13,7 +13,7 @@ res.sendFile(path.join(__dirname, 'index.html'))
 
 
 io.on('connection', (socket)=>{
-  console.log('connecting to socket')
+  // console.log('connecting to socket')
 
   socket.on('newUser' , (data)=>{
     socket.broadcast.emit('newUser' , {name:data, msg:' has joined our Community'})
@@ -21,6 +21,14 @@ io.on('connection', (socket)=>{
 
   socket.on('send' , (data)=>{
     socket.broadcast.emit('newUser' , data)
+  })
+   
+  socket.on('userTyping' , (data)=>{
+    socket.broadcast.emit('typing' , data)
+  })
+
+  socket.on('typedSuccess' , (data)=>{
+    socket.broadcast.emit('typedSuccess' , data)
   })
 
  
