@@ -44,7 +44,7 @@ body{
 
 .chatbox{
     width: 60%;
-    height: 500px;
+    height: auto;
     background: rgba(255, 255, 255, 0.322);
     border-radius: 15px;
     border: 1px solid white;
@@ -52,6 +52,14 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
+}
+.appName{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
 }
 .sender{
     width: 70%;
@@ -97,6 +105,7 @@ p{
     width: 90%;
     border-radius: 15px;
     height: 350px;
+    margin-bottom: 50px;
     margin-top: 20px;
     overflow-y: auto;
 }
@@ -147,16 +156,31 @@ span{
 
 .typing{
     text-align: center;
-    margin-top: 15px;
     margin-bottom: 15px;
+    width: 30%;
     animation: type 4s infinite;
     transition: 320ms;
-    display: none;
+    position: absolute;
+    background: rgba(132, 235, 132, 0.418);
+    height: 50px;
+    left: 0;
+    line-height: 50px;
+    border-radius: 15px;
+    display: block;
 }
 
 @keyframes type {
-     25%{color: rgb(124, 124, 124);transition: 320ms;}
-     50%{color: rgb(56, 37, 1);transition: 320ms;}
+    25% {
+            color: rgb(124, 124, 124);
+            transition: 320ms;
+            background: rgba(235, 161, 132, 0.418);
+        }
+    
+        50% {
+            color: rgb(56, 37, 1);
+            transition: 320ms;
+            background: rgba(132, 235, 132, 0.418);
+        }
 }
 
 /*form*/
