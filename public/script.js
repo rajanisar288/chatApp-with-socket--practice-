@@ -41,7 +41,7 @@ function messageReceiver(msg) {
 
 
 //user typing event
-const userType = `${names} : is typing....`
+const userType = `${names} : is Typing....`
 function userTyping(){
   socket.emit('userTyping', userType )
 }
