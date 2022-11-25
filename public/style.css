@@ -166,7 +166,7 @@ span{
     left: 0;
     line-height: 50px;
     border-radius: 15px;
-    display: block;
+    display: none;
 }
 
 @keyframes type {
